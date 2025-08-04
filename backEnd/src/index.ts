@@ -5,7 +5,15 @@ import cors from "cors"
 import dotenv from "dotenv";
 import cookieParser = require("cookie-parser");
 dotenv.config();
-const app: Application = express();
+export const app: Application = express();
+
+// api/index.ts
+import { VercelRequest, VercelResponse } from '@vercel/node'
+
+export default function handler(req: VercelRequest, res: VercelResponse) {
+  res.status(200).json({ message: "Hello from Vercel backend!" });
+}
+
 
 
 import { Router } from "./Router/Route";
@@ -31,3 +39,4 @@ connectDB()
 app.listen(4000,()=>{
     console.log("Server is running on port 4000");
 })
+
