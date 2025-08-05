@@ -10,7 +10,10 @@ export const Signup = ({ onAuthSuccess }) => {
     const [loginData, setLoginData] = useState({ username: '', email: "", password: '', type: "signup" });
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(false);
-let api=process.env.BACK_API || "http://localhost:4000";
+let api = process.env.REACT_APP_API_URL || "https://imagebackend-2.onrender.com";
+
+
+
 
     const handleSubmit = async (e) => {
         e.preventDefault();

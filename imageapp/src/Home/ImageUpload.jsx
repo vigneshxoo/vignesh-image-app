@@ -15,8 +15,7 @@ export const ImageUpload = () => {
     const[text,setText]=useState()
 
     // console.log(preview)
-let api=process.env.BACK_API || "http://localhost:4000";
-
+  let api = process.env.REACT_APP_API_URL || "https://imagebackend-2.onrender.com";
     const handleImageChange = (e) => {
         const file = e.target.files[0];
 

@@ -7,7 +7,7 @@ export const Profile = () => {
     const [error, setError] = useState("");
     const [modalOpen, setModalOpen] = useState(false);
     const [selectedImage, setSelectedImage] = useState(null);
-let api=process.env.BACK_API || "http://localhost:4000";
+    let api = process.env.REACT_APP_API_URL || "https://imagebackend-2.onrender.com";
 
     useEffect(() => {
         axios.get(`${api}/getimg`, { withCredentials: true })

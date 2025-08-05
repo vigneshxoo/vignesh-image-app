@@ -9,7 +9,7 @@ export const Login = ({ onAuthSuccess }) => {
     const [loginData, setLoginData] = useState({ username: '', password: '', type: "login" });
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(false);
-let api=process.env.BACK_API || "http://localhost:4000";
+    let api = process.env.REACT_APP_API_URL || "https://imagebackend-2.onrender.com";
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -38,7 +38,7 @@ let api=process.env.BACK_API || "http://localhost:4000";
                 navigate("/home");
             } else {
 
-                setError( response.data.message || "Invalid credentials");
+                setError(response.data.message || "Invalid credentials");
             }
         } catch (error) {
             setError(error?.response?.data?.message || "Login failed");
@@ -111,7 +111,7 @@ let api=process.env.BACK_API || "http://localhost:4000";
                     {loading ? "Logging in..." : "Login"}
                 </button>
                 <Link to={'/signup'} className='text-sm font-medium font-poppins mt-4 block text-center text-blue-600 hover:underline'>
-                  <span>  Already have an account? </span>  Signup
+                    <span>  Already have an account? </span>  Signup
                 </Link>
             </form>
         </div>
