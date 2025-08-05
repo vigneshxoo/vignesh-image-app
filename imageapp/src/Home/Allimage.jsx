@@ -9,7 +9,7 @@ export const ALLImages = () => {
     const [selectedImage, setSelectedImage] = useState(null);
     let api = process.env.REACT_APP_API_URL || "https://imagebackend-2.onrender.com";
     useEffect(() => {
-        axios.get(`${api}/all`, { withCredentials: true })
+        axios.get(`${api}all`, { withCredentials: true })
             .then(res => {
 
                 const result = res.data;

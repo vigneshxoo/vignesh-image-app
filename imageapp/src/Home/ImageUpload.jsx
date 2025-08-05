@@ -52,7 +52,7 @@ export const ImageUpload = () => {
 
                 // },);
                 const response = await axios.post(
-                    `${api}/img`,
+                    `${api}img`,
                     formdata, // ✅ pass FormData directly
                     {
                         headers: {

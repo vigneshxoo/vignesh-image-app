@@ -30,7 +30,7 @@ let api = process.env.REACT_APP_API_URL || "https://imagebackend-2.onrender.com"
         setLoading(true);
         try {
             const response = await axios.post(
-                `${api}/signup`,
+                `${api}signup`,
                 {
                     username: loginData.username.trim(),
                     password: loginData.password.trim(),

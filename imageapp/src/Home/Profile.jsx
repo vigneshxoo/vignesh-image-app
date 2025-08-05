@@ -10,7 +10,7 @@ export const Profile = () => {
     let api = process.env.REACT_APP_API_URL || "https://imagebackend-2.onrender.com";
 
     useEffect(() => {
-        axios.get(`${api}/getimg`, { withCredentials: true })
+        axios.get(`${api}getimg`, { withCredentials: true })
             .then(res => {
 
                 const result = res.data;
